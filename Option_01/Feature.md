@@ -1,7 +1,3 @@
-Here’s the cleaned-up version you can share:
-
----
-
 # Theming with Tailwind Variants *Option 01*
 
 Here we are using **Tailwind Variants with class** to manage and apply custom themes.
