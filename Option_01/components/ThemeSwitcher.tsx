@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import {Sun, Moon, Flower,} from "lucide-react";
 
+const DATA_ATTR = "data-theme";
+
 export default function ThemeSwitcher() {
     const [activeTheme, setActiveTheme] = useState<"sunhaze"|"skyglow"|"flare">("skyglow");
 
@@ -8,24 +10,17 @@ export default function ThemeSwitcher() {
     const handleThemeChange = (theme: "sunhaze"|  "skyglow" | "flare") => {
         const htmlElement = document.documentElement;
 
-        // Remove all theme classes
+        // Using class name -01
+        // Remove all the previous theme classes
         htmlElement.classList.remove('sunhaze','flare', 'skyglow');
         // Add new theme class
         htmlElement.classList.add(theme);
+
+        // Using data attribute -02
+        // htmlElement.setAttribute(DATA_ATTR, theme) // Uncomment this and use data attribute instead
+
         setActiveTheme(theme);
     };
-
-    // Initialize theme state on component mount
-    useEffect(() => {
-        const htmlElement = document.documentElement;
-
-        // Check which theme class exists on an HTML element
-        if (htmlElement.classList.contains('flare')) {
-            setActiveTheme('flare');
-        } else if (htmlElement.classList.contains('skyglow')) {
-            setActiveTheme('skyglow');
-        }
-    }, []);
 
     return (
         <div className="fixed bottom-4 right-4 z-50">

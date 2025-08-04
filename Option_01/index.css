@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
-@custom-variant skyglow (&:where(.skyglow, .skyglow *));
-@custom-variant flare (&:where(.flare, .flare *));
-
-/*Default color (here skyglow)*/
+/*Default color (here skyglow as root)*/
 :root{
     --background: #d2e5f3;
     --foreground: #1f2a37;

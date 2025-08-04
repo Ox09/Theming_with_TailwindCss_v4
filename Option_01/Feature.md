@@ -1,15 +1,9 @@
 # Theming with Tailwind Variants *Option 01*
 
-Here we are using **Tailwind Variants with class** to manage and apply custom themes.
+Here we are using **Tailwind Variants with data attribute** to manage and apply custom themes.
 
 ### How It Works
 
-* Add custom variants with your desired class names:
-
-  ```css
-  @custom-variant skyglow (&:where(.skyglow, .skyglow));
-  @custom-variant flare (&:where(.flare, .flare));
-  ```
 * Define the default global styles in `:root`:
 
 ```postcss
@@ -79,7 +73,7 @@ Switch Theme
 }
 ```
 
-* Use variables in your components:
+* Use variables as tailwind utilities in your components:
 
 ```tsx
 import React from "react";
@@ -89,7 +83,7 @@ export function MyButton() {
 }
 ```
 ```tsx
-<html class="flare">
+<html class="flare"> {/* use theme switcher to toggle the class */}
   <body>
     <MyButton/> {/* MyButton will apply styles based on class flare */}
   </body>
@@ -101,11 +95,5 @@ export function MyButton() {
 * Cleaner, more maintainable styling with a single source of truth.
 * Consistent design across components.
 * Simple theme switching with minimal code changes.
-
----
-
-Using **Tailwind Variants with class**, you can easily set up and switch between custom themes in your app. Define default variables in `:root`, then add additional theme classes (e.g., `.flare`, `.sunhaze`) with their own values. With the `@theme inline` directive, these variables update automatically when you toggle theme classes on `<html>` or `<body>`.
-
-This approach keeps your styles clean, consistent, and easy to maintain—allowing theme switching with minimal code changes.
 
 ---
