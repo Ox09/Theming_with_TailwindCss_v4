@@ -1,6 +1,6 @@
 # Theming with Tailwind Variants *Option 01*
 
-Here we are using **Tailwind Variants with data attribute** to manage and apply custom themes.
+Here we are using **Top level class and data attribute** to manage and apply custom themes.
 
 ### How It Works
 
