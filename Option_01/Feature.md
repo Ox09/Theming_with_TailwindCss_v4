@@ -1,4 +1,4 @@
-# Theming with Tailwind Variants *Option 01*
+# Theming with Tailwind *@theme inline* directive
 
 Here we are using **Top level class and data attribute** to manage and apply custom themes.
 
@@ -38,7 +38,9 @@ Here we are using **Top level class and data attribute** to manage and apply cus
 /* Other themes */
 ```
 
-* Use *@theme inline {}* so variables update based on classes set on `<html>` or `<body>`:
+* Use *@theme inline {}* so variables update based on the class set on `<html>` or `<body>`. 
+  [ _p.s_ - don't use **@theme** 
+  as it doesn't override styles based on root element class or data attribute ]:
 
 ```postcss
 @theme inline {
