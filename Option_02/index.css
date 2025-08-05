@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Using class */
+@custom-variant wine (&:where(.wine, .wine *));
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Using data attribute , this will override the use of class variants (use either one) */
+@custom-variant wine (&:where([data-theme=wine], [data-theme=wine] *));
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+
+@theme {
+  /* For Dark Prefix utility */
+  --color-dark-background: #0a0a0a;
+  --color-dark-foreground: #ffffff;
+  --color-dark-hover: #1a1a1a;
+  --color-dark-accent: #3b82f6;
+  --color-dark-accent-foreground: #60a5fa;
+
+  /* For Wine Prefix utility */
+  --color-wine-background: #672b3c;
+  --color-wine-foreground: #ffffff;
+  --color-wine-hover: #b134573f;
+  --color-wine-accent: #b13457;
+  --color-wine-accent-foreground: #ffffff;
+}
