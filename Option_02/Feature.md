@@ -87,12 +87,14 @@ export function MyButton() {
 
 ## Cons
 1. ClassName Bloat
-  * Adding multiple themes (dark:bg-black theme-ocean:bg-blue-900 theme-sunset:bg-orange-700) can make your class strings long and messy.
+   * Adding multiple themes (dark:bg-black theme-ocean:bg-blue-900 theme-sunset:bg-orange-700) can make your class 
+     strings long and messy.
 2. No Extra CSS Needed
-  * Everything stays within Tailwind utilities, avoiding manual CSS overrides.
+   * Everything stays within Tailwind utilities, avoiding manual CSS overrides.
 3. Harder Maintenance
-  * If you add a new theme later, you must update every component with new variant classes.
+   * If you add a new theme later, you must update every component with new variant classes.
 4. No Centralized Control
-  * Variants scatter theme logic across many files instead of keeping theme colors in one config or CSS variable system.
+   * Variants scatter theme logic across many files instead of keeping theme colors in one config or CSS variable 
+     system.
 
 ---
